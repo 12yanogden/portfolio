@@ -11,24 +11,7 @@
 
 <body>
     <p>before</p>
-    <div x-data="{
-        people: [
-          { name: 'John', age: '25', skills: ['JavaScript', 'CSS'] },
-          { name: 'Jane', age: '30', skills: ['Laravel', 'MySQL', 'jQuery'] }
-        ]
-      }">
-        <ul>
-            <template x-for="person in people">
-                <x-component url="./public/person.html" x-data="{ item: person }"></x-component>
-            </template>
-        </ul>
-    </div>
-    <p>---</p>
-    <x-component url="./components/test.html"></x-component>
-    <p>---</p>
-    <div>
-        <x-component url="./public/test.html" />
-    </div>
+    <x-component url="./components/carousel.html"></x-component>
     <p>after</p>
 </body>
 
