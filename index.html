@@ -11,10 +11,31 @@
 
 <body>
     <p>before</p>
-    <template>
-        <x-component
-            url="/components/test.html"
-        />
+    <div x-data="{
+        people: [
+          { name: 'John', age: '25', skills: ['JavaScript', 'CSS'] },
+          { name: 'Jane', age: '30', skills: ['Laravel', 'MySQL', 'jQuery'] }
+        ]
+      }">
+        <ul>
+            <template x-for="person in people">
+                <x-component template="person" x-data="{ item: person }"></x-component>
+            </template>
+        </ul>
+    </div>
+    
+    <template id="person">
+        <li>
+            <h2 x-text="item.name"></h2>
+    
+            <p x-text="item.age"></p>
+    
+            <ul>
+                <template x-for="skill in item.skills">
+                    <li x-text="skill"></li>
+                </template>
+            </ul>
+        </li>
     </template>
     <p>after</p>
 </body>
