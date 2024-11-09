@@ -19,24 +19,10 @@
       }">
         <ul>
             <template x-for="person in people">
-                <x-component template="person" x-data="{ item: person }"></x-component>
+                <x-component url="/public/person.html" x-data="{ item: person }"></x-component>
             </template>
         </ul>
     </div>
-    
-    <template id="person">
-        <li>
-            <h2 x-text="item.name"></h2>
-    
-            <p x-text="item.age"></p>
-    
-            <ul>
-                <template x-for="skill in item.skills">
-                    <li x-text="skill"></li>
-                </template>
-            </ul>
-        </li>
-    </template>
     <p>after</p>
 </body>
 

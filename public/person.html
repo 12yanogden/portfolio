@@ -1,0 +1,11 @@
+<li>
+    <h2 x-text="item.name"></h2>
+
+    <p x-text="item.age"></p>
+
+    <ul>
+        <template x-for="skill in item.skills">
+            <li x-text="skill"></li>
+        </template>
+    </ul>
+</li>
