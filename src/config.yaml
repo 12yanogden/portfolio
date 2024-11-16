@@ -11,7 +11,7 @@ metadata:
   title:
     default: Ryan Ogdens Portfolio
     template: '%s — Ryan Ogdens Portfolio'
-  description: "Ryan Ogdens Portfolio."
+  description: 'Ryan Ogdens Portfolio.'
   robots:
     index: true
     follow: true
