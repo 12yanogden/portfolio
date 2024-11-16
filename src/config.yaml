@@ -1,17 +1,17 @@
 site:
-  name: Ryan Ogden's Portfolio
+  name: Ryan Ogdens Portfolio
   site: 'https://12yanogden.github.io'
   base: '/portfolio'
   trailingSlash: false
 
-  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+  googleSiteVerificationId: false
 
 # Default SEO metadata
 metadata:
   title:
-    default: Ryan Ogden's Portfolio
-    template: '%s — Ryan Ogden's Portfolio'
-  description: "Ryan Ogden's Portfolio."
+    default: Ryan Ogdens Portfolio
+    template: '%s — Ryan Ogdens Portfolio'
+  description: "Ryan Ogdens Portfolio."
   robots:
     index: true
     follow: true
