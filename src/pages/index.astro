@@ -13,14 +13,14 @@ import { getPermalink } from '~/utils/permalinks';
 import PopulatedHeader from '~/components/widgets/PopulatedHeader.astro';
 
 const metadata = {
-  title: 'Ryan Ogden\'s Portfolio',
+  title: "Ryan Ogden's Portfolio",
 };
 ---
 
 <Layout metadata={metadata}>
   <Fragment slot="announcement"></Fragment>
   <Fragment slot="header">
-    <PopulatedHeader/>
+    <PopulatedHeader />
   </Fragment>
 
   <!-- Hero2 Widget ******************* -->
@@ -31,8 +31,8 @@ const metadata = {
     actions={[{ variant: 'primary', text: 'Hire me', href: getPermalink('/contact#form') }]}
   >
     <Fragment slot="subtitle">
-      I'm a Software Engineer passionate about building beautiful things. <br /> With 4 years of experience and a Bachelors in Computer Science. I prioritize performance and utility, transforming applications into profitable
-      products.
+      I'm a Software Engineer passionate about building beautiful things. <br /> With 4 years of experience and a Bachelors
+      in Computer Science. I prioritize performance and utility, transforming applications into profitable products.
     </Fragment>
   </Hero>
 

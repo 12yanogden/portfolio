@@ -121,8 +121,6 @@ export const headerData = {
 export const footerData = {
   links: [],
   secondaryLinks: [],
-  socialLinks: [
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/12yanogden' },
-  ],
-  footNote: `© ` + (new Date()).getFullYear() +  ` Ryan Ogden · All rights reserved.`,
+  socialLinks: [{ ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/12yanogden' }],
+  footNote: `© ` + new Date().getFullYear() + ` Ryan Ogden · All rights reserved.`,
 };

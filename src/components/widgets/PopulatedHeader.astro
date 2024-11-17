@@ -1,24 +1,24 @@
 ---
-import Header from "./Header.astro"
+import Header from './Header.astro';
 
-const indexPath = '/portfolio'
+const indexPath = '/portfolio';
 ---
 
 <Header
-      links={[
-        { text: 'Home',     href: indexPath + '#' },
-        { text: 'About',    href: indexPath + '#about' },
-        { text: 'Resume',   href: indexPath + '#resume' },
-        { text: 'Porfolio', href: indexPath + '#porfolio' },
-        { text: 'Blog',     href: indexPath + '#blog' },
-        { text: 'Contact',  href: indexPath + '/contact#'}
-      ]}
-      actions={[
-        {
-          text: 'Hire me',
-          href: '#',
-        },
-      ]}
-      isSticky
-      showToggleTheme
-    />
+  links={[
+    { text: 'Home', href: indexPath + '#' },
+    { text: 'About', href: indexPath + '#about' },
+    { text: 'Resume', href: indexPath + '#resume' },
+    { text: 'Porfolio', href: indexPath + '#porfolio' },
+    { text: 'Blog', href: indexPath + '#blog' },
+    { text: 'Contact', href: indexPath + '/contact#' },
+  ]}
+  actions={[
+    {
+      text: 'Hire me',
+      href: '#',
+    },
+  ]}
+  isSticky
+  showToggleTheme
+/>
