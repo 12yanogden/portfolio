@@ -1,9 +1,28 @@
 ---
-import { SITE } from 'astrowind:config';
+import Image from '~/components/common/Image.astro';
 ---
 
 <span
   class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
 >
-  🚀 {SITE?.name}
+  <Image
+    class="mx-auto rounded-full dark:hidden"
+    widths={[48, 72, 72, 72]}
+    sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+    loading="eager"
+    width={72}
+    height={72}
+    src={"~/assets/images/r_logo_black.png"}
+    alt='Logo'
+  />
+  <Image
+    class="mx-auto rounded-full hidden dark:block"
+    widths={[48, 72, 72, 72]}
+    sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+    loading="eager"
+    width={72}
+    height={72}
+    src={"~/assets/images/r_logo_white.png"}
+    alt='Logo'
+  />
 </span>
