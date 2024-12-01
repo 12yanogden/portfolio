@@ -19,13 +19,13 @@ Despite the dysfunction, we delivered the feature on time. Yet the experience le
 
 ---
 
-In this article, I’ll explore how accountability defines strong leadership, the pitfalls of blame culture, and practical steps leaders can take to foster trust, collaboration, and resilience within their teams.  
+In this article, I’ll explore how accountability defines strong leadership, the pitfalls of blame culture, and practical steps leaders can take to foster trust, collaboration, and resilience within their teams.
 
-## The Importance of Accountability in Leadership  
+## The Importance of Accountability in Leadership
 
 Leadership accountability isn’t just a nice-to-have; it’s a cornerstone of effective teamwork. When a leader deflects blame, it fractures trust, damages their credibility, and diverts attention from the underlying syndromatic issues at play.
 
-In my anecdote above, the feature lead chose to ignore critical issues rather than addressing those issues proactively. Now, imagine if blame-shifting became rampant on the team. Collaboration would stagnate as developers hid mistakes and questions, for fear of being vulnerable to criticism. The cycle of finger pointing would spiral into a toxic environment, undermining talent retention, development velocity, and product quality *all at the same time*.
+In my anecdote above, the feature lead chose to ignore critical issues rather than addressing those issues proactively. Now, imagine if blame-shifting became rampant on the team. Collaboration would stagnate as developers hid mistakes and questions, for fear of being vulnerable to criticism. The cycle of finger pointing would spiral into a toxic environment, undermining talent retention, development velocity, and product quality _all at the same time_.
 
 By contrast, proactive accountability creates the opposite effect. When leaders take ownership of outcomes, they build trust and encourage collaboration. Once developers feel free from blame, they will take risks, make mistakes, and ask questions. They will drive a virtuous cycle of innovation for which employees stay, development velocity accelerates, and product quality achieves new levels of excellence.
 
@@ -55,8 +55,8 @@ By contrast, proactive accountability creates the opposite effect. When leaders 
 8. **Provide Feedback Often**
    A leader's silence is quickly filled by a developer's own self-doubts or agrandized ego. Do not let developers assume what you think. Take a moment to apologize for their challenges, ask them to change, or thank them for a job well done.
 
-9.  **Praise Publically and Often**
+9. **Praise Publically and Often**
    When I see a developer do something exceptional, I write it down on my "Trophy Wall". That way, I have a prepared list of praiseworthy items to bring up during standups, retrospectives, performance reviews, and recommendation letters.
 
 10. **The Buck Stops Here**
-   If the code is falling apart, it's primarily the leader's responsibility. Maybe a developer really messed up, but the leader is never free of blame. Success begins and ends with them.
+    If the code is falling apart, it's primarily the leader's responsibility. Maybe a developer really messed up, but the leader is never free of blame. Success begins and ends with them.
