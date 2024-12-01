@@ -1,6 +1,6 @@
 ---
-import Headline from "../ui/Headline.astro";
-import WidgetWrapper from "../ui/WidgetWrapper.astro";
+import Headline from '../ui/Headline.astro';
+import WidgetWrapper from '../ui/WidgetWrapper.astro';
 
 const {
   title = await Astro.slots.render('title'),
@@ -16,27 +16,30 @@ const {
 ---
 
 <script src="//unpkg.com/alpinejs" defer></script>
-<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-<WidgetWrapper
-  id={id}
-  isDark={isDark}
-  bg={bg}
->
-    <Headline title={title} subtitle={subtitle} tagline={tagline} classes={classes?.headline as Record<string, string>} />
-    
-    <div
-        x-data="{}"
-        x-init="$nextTick(() => {
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+<WidgetWrapper id={id} isDark={isDark} bg={bg}>
+  <Headline title={title} subtitle={subtitle} tagline={tagline} classes={classes?.headline as Record<string, string>} />
+
+  <div
+    x-data="{}"
+    x-init="$nextTick(() => {
             let ul = $refs.logos;
             ul.insertAdjacentHTML('afterend', ul.outerHTML);
             ul.nextSibling.setAttribute('aria-hidden', 'true');
         })"
-        class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+    class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+  >
+    <ul
+      x-ref="logos"
+      class="text-5xl flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
     >
-        <ul x-ref="logos" class="text-5xl flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
-            {
-                logos.map((logo: string) => <li><i class={logo}/></li>)
-            }
-        </ul>                
-    </div>
+      {
+        logos.map((logo: string) => (
+          <li>
+            <i class={logo} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </WidgetWrapper>
