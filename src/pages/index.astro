@@ -10,6 +10,7 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { getPermalink } from '~/utils/permalinks';
+import LogoCarousel from '~/components/widgets/LogoCarousel.astro';
 
 const metadata = {
   title: "Ryan Ogden's Portfolio",
@@ -23,7 +24,6 @@ const metadata = {
   </Fragment>
 
   <!-- Hero2 Widget ******************* -->
-
   <Hero
     id="hero"
     title="Ryan Ogden"
@@ -31,7 +31,7 @@ const metadata = {
   >
     <Fragment slot="subtitle">
       I'm a Software Engineer passionate about building beautiful things. <br /> With 4 years of experience and a Bachelors
-      in Computer Science. I prioritize performance and utility, transforming applications into profitable products.
+      in Computer Science, I prioritize performance and utility, transforming applications into profitable products.
     </Fragment>
   </Hero>
 
@@ -39,35 +39,8 @@ const metadata = {
 
   <Content
     id="about"
-    columns={3}
-    items={[
-      {
-        icon: 'tabler:brand-dribbble',
-        callToAction: {
-          target: '_blank',
-          text: 'Dribbble',
-          href: '#',
-        },
-      },
-      {
-        icon: 'tabler:brand-behance',
-        callToAction: {
-          target: '_blank',
-          text: 'Behance',
-          href: '#',
-        },
-      },
-      {
-        icon: 'tabler:brand-pinterest',
-        callToAction: {
-          target: '_blank',
-          text: 'Pinterest',
-          href: '#',
-        },
-      },
-    ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      src: '~/assets/images/primary_photo.png',
       alt: 'Colorful Image',
       loading: 'eager',
     }}
@@ -75,16 +48,12 @@ const metadata = {
     <Fragment slot="content">
       <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
       <p>
-        Welcome to my creative journey. My work is a testament to my commitment to bringing ideas to life, where each
-        pixel becomes a brushstroke in the canvas of imagination.
+        I started writing code early in my career and never looked back. I have a vision to create products that make people lean forward and ask, "Wait, you can do that?!".
       </p>
       <br />
       <p>
-        I find inspiration in the world around me, whether through the pages of a captivating novel, the intricate
-        details of typography, or the vibrant hues of nature during my outdoor escapades.
+        I see code as having the potential to better the lives of everyone around me. It is my dream for organizations to use the tools I build to make a more beautiful world for us all.
       </p>
-      <br />
-      <p>If you're curious to dive deeper into my work, you can follow me:</p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -100,14 +69,38 @@ const metadata = {
     items={[
       {
         title:
-          'Graphic Designer <br /> <span class="font-normal">ABC Design Studio, New York, NY</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
-        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
+          'Software Engineer <br /> <span class="font-normal">Pioneering Evolution LLC, Arlington, VA</span> <br /> <span class="text-sm font-normal">Jan 2023 - Present</span>',
+        description: `• Led the development of the “Multiple Baselines” feature, the largest in the product’s history, transforming the core architecture and adding a new dimension to military budgeting.<br />
+        • Worked with the client to manage scope, proactively planned to remove bottlenecks, and redefined how ticket requirements and test procedures are written.<br />
+        • Single-handedly implemented the “Fund Plan Change Worksheet”, delivering an anticipated feature that enhances management account flexibility.<br />
+        • Spearheaded the introduction of comprehensive code documentation practices, fostering improved knowledge sharing and onboarding efficiency.<br />
+        • Played a key role in setting up the testing suite and package-level development, contributing to higher software quality and modular architecture.<br />
+        • Rewrote a script to reconcile breaking changes, optimizing deployment processes and ensuring seamless upgrades.<br />
+        • Acted as a key resource for team members, providing technical guidance in Laravel and Vue, and promoting best practices through code reviews and mentorship.<br />
+        • Cultivated a collaborative team environment by recognizing and publicly appreciating team member’s contributions and achievements, enhancing morale and team cohesion.`,
         icon: 'tabler:briefcase',
       },
       {
         title:
-          'Junior Graphic Designer <br /> <span class="font-normal">XYZ Creative Agency, Los Angeles, CA</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
-        description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
+          'Software Design Teaching Assistant <br /> <span class="font-normal">Brigham Young University, Provo, UT</span> <br /> <span class="text-sm font-normal">Sep 2022 - Dec 2022</span>',
+        description: `• Facilitated a scalable MVP Android Twitter clone powered by AWS lambdas, SQS queues, and DynamoDB tables.<br />
+• Coached 10+ students per day to solve issues, even when they were discouraged.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Full-Stack Developer <br /> <span class="font-normal">BYU Office of Information Technology, Provo, UT</span> <br /> <span class="text-sm font-normal">Sep 2021 - Jun 2022</span>',
+        description: `• Built an administrative tool with a highly customized user interface for the Office of the President.<br />
+• Doubled (2x) team’s point velocity by cross-training and coordinating with colleagues.<br />
+• Refactored BYU’s course catalog of 100+ pages to use Vue, NodeJS, and DynamoDB.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Platform Administrator <br /> <span class="font-normal">BYU Office of Information Technology, Provo, UT</span> <br /> <span class="text-sm font-normal">Sep 2021 - Jun 2022</span>',
+        description: `• Saved 12 weeks of work per year by automating update and validation processes.<br />
+• Boosted efficiency by engineering 100+ Python, Ansible, and Linux Shell scripts.<br />
+• Improved training and cross-training by writing 50+ knowledge base articles.`,
         icon: 'tabler:briefcase',
       },
     ]}
@@ -121,11 +114,7 @@ const metadata = {
     title="Education"
     items={[
       {
-        title: `Master of Fine Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
-        icon: 'tabler:school',
-      },
-      {
-        title: `Bachelor of Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,
+        title: `Bachelor of Science in Computer Science <br /> <span class="font-normal">Brigham Young University</span> <br /> <span class="text-sm font-normal">2018 - 2023 | 3.94 GPA</span>`,
         icon: 'tabler:school',
       },
     ]}
@@ -134,54 +123,86 @@ const metadata = {
 
   <!-- Features3 Widget ************** -->
 
+  <LogoCarousel
+    title="Proficiencies"
+    subtitle="If it's not .NET, I've probably tried it."
+    logos={[
+      "devicon-amazonwebservices-plain-wordmark",
+      "devicon-alpinejs-original",
+      "devicon-ansible-plain",
+      "devicon-astro-plain",
+      "devicon-bash-plain",
+      "devicon-c-plain",
+      "devicon-cplusplus-plain",
+      "devicon-css3-plain",
+      "devicon-dart-plain",
+      "devicon-firebase-plain",
+      "devicon-flutter-plain",
+      "devicon-git-plain",
+      "devicon-go-original-wordmark",
+      "devicon-html5-plain",
+      "devicon-java-plain",
+      "devicon-laravel-original",
+      "devicon-mysql-original",
+      "devicon-neo4j-plain",
+      "devicon-php-plain",
+      "devicon-postgresql-plain",
+      "devicon-python-plain",
+      "devicon-rust-original",
+      "devicon-sqlite-plain",
+      "devicon-vuejs-plain",
+      "devicon-tailwindcss-original"
+    ]}
+  />
+
   <Features3
     title="Skills"
-    subtitle="Discover the proficiencies that allow me to bring imagination to life through design."
+    subtitle="It's one thing to write code; it's another to write code with a team."
     columns={3}
     defaultIcon="tabler:point-filled"
     items={[
       {
-        title: 'Graphic design',
-        description: 'Proficient in crafting visually appealing designs that convey messages effectively.',
+        title: 'Design Patterns',
+        description: 'I know when to use them, and when they bring unnecessary complexity.',
       },
       {
-        title: 'Branding and identity',
-        description: 'Skilled at developing cohesive brand identities, including logos and brand guidelines.',
+        title: 'Sprint Planning',
+        description: 'Identifying bottlenecks, breaking down tickets, and strictly managing scope.',
       },
       {
-        title: 'User-centered design',
-        description: 'Experienced in creating user-friendly interfaces and optimizing user experiences.',
+        title: 'User-Driven Design',
+        description: 'Understanding the why behind the product is essential to prioritizing features.',
       },
       {
-        title: 'Adobe Creative Suite',
-        description: 'Skilled in using Photoshop, Illustrator, and InDesign to create and edit visual elements.',
+        title: 'Test-Drivien Development',
+        description: 'Writing tests beforehand and adapting them during implementation.',
       },
       {
-        title: 'Typography',
-        description: 'Adept in selecting and manipulating typefaces to enhance design aesthetics.',
+        title: 'Team Building',
+        description: 'Bringing developers in from the sidelines and meaningfully rewarding their contributions.',
       },
       {
-        title: 'Color theory',
-        description: 'Proficient in using color to evoke emotions and enhance visual harmony.',
+        title: 'Honest Reporting',
+        description: "I'll tell you how the team is really doing, not just what I think you want to hear.",
       },
       {
-        title: 'Print and digital design',
-        description: 'Knowledgeable in designing for both print materials and digital platforms.',
+        title: 'Effective Documentation',
+        description: "Reduce your 'bus factor' and protect your code from becoming a black box.",
       },
       {
-        title: 'Attention to detail',
-        description: 'Diligent in maintaining precision and quality in all design work.',
+        title: 'Code Optimization',
+        description: 'Lazy-loading, eager-loading, asynchrony, memory-reduction, and queue management.',
       },
       {
-        title: 'Adaptability',
-        description: 'Quick to adapt to new design trends, technologies, and client preferences.',
-      },
+        title: 'Readable Code',
+        description: "I'm a never-nester who writes self-annotaing code, and then annotates it anyways."
+      }
     ]}
   />
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
     id="porfolio"
     title="Elevating visual narratives"
     subtitle="Embark on a design journey that surpasses pixels, entering a realm of imagination. Explore my portfolio, where passion and creativity converge to shape enthralling visual narratives."
@@ -218,11 +239,11 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content> -->
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
     isReversed
     isAfterContent={true}
     items={[
@@ -256,11 +277,11 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content> -->
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
     isReversed
     isAfterContent={true}
     items={[
@@ -293,13 +314,14 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content> -->
 
   <!-- Testimonials Widget *********** -->
 
   <Testimonials
-    title="Client testimonials"
-    subtitle="Discover what clients have to say about their experiences working with me."
+    id="testimonials"
+    title="Testimonials"
+    subtitle="How is it to work with Ryan really?"
     testimonials={[
       {
         testimonial: `She took our vague concept and turned it into a visual masterpiece that perfectly aligned with our goals. Her attention to detail and ability to translate ideas into compelling visuals exceeded our expectations.`,
@@ -360,7 +382,7 @@ const metadata = {
 
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
+  <!-- <CallToAction
     title="Let's create together"
     subtitle="Ready to transform your vision into captivating designs?"
     actions={[
@@ -370,7 +392,7 @@ const metadata = {
         href: '/',
       },
     ]}
-  />
+  /> -->
 
   <!-- BlogLatestPost Widget **************** -->
 
