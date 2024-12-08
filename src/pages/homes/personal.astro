@@ -10,6 +10,7 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { getPermalink } from '~/utils/permalinks';
+import PopulatedHeader from '~/components/widgets/PopulatedHeader.astro';
 
 const metadata = {
   title: 'Personal Homepage Demo',
@@ -19,7 +20,7 @@ const metadata = {
 <Layout metadata={metadata}>
   <Fragment slot="announcement"></Fragment>
   <Fragment slot="header">
-    <Header
+    <PopulatedHeader
       links={[
         { text: 'Home', href: '#' },
         { text: 'About', href: '#about' },
